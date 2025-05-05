@@ -8,11 +8,12 @@
 - Produce professional graphics using **Adobe Photoshop** and **Illustrator**.
 - Write clean, efficient code in **Java**, **C#** and **Python**.
 
+|![](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=JoshTVR&theme=dracula)|![](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=JoshTVR&theme=dracula)|![](https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=JoshTVR&theme=dracula)|
+|-----|------|------|
+
 🔍 **I'm interested in:**
 - Opportunities to collaborate on innovative and impactful projects.
 - Learning new technologies and methodologies.
-
-🤝 **I'm looking to collaborate on:**
 - Projects that leverage VR/XR for educational or commercial applications.
 - Creative and technically challenging endeavors.
 
@@ -24,3 +25,4 @@
 - I'm always excited to explore new technologies and innovative solutions!
 
 Let's connect and create something amazing together!
+
