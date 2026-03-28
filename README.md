@@ -71,17 +71,6 @@ const josh = {
 
 ## 🚀 Featured Projects
 
-<div align="center">
-
-<a href="https://github.com/JoshTVR/JoshTVR-Portfolio">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=JoshTVR&repo=JoshTVR-Portfolio&theme=tokyonight&border_color=7c3aed&title_color=7c3aed&icon_color=4f46e5" />
-</a>
-<a href="https://github.com/JoshTVR/Matplotlib-Zero-to-Hero">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=JoshTVR&repo=Matplotlib-Zero-to-Hero&theme=tokyonight&border_color=7c3aed&title_color=7c3aed&icon_color=4f46e5" />
-</a>
-
-</div>
-
 | Project | Description | Stack |
 |---|---|---|
 | 🥽 **Clubit VR** | Polyrhythmic music VR experience for Meta Quest | Unity · C# · XR Toolkit |
@@ -95,12 +84,16 @@ const josh = {
 
 <div align="center">
 
-<img height="160" src="https://github-readme-stats.vercel.app/api?username=JoshTVR&show_icons=true&theme=tokyonight&border_color=7c3aed&title_color=7c3aed&icon_color=4f46e5&hide_border=false&count_private=true" />
-<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JoshTVR&layout=compact&theme=tokyonight&border_color=7c3aed&title_color=7c3aed&icon_color=4f46e5&hide_border=false&langs_count=6" />
+<img src="https://streak-stats.demolab.com?user=JoshTVR&theme=tokyonight&border=7c3aed&ring=7c3aed&fire=4f46e5&currStreakLabel=7c3aed&hide_border=false" />
 
-<br/>
+<br/><br/>
 
-<img src="https://streak-stats.demolab.com?user=JoshTVR&theme=tokyonight&border=7c3aed&ring=7c3aed&fire=4f46e5&currStreakLabel=7c3aed" />
+![TSQL](https://img.shields.io/badge/T--SQL-18%25-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-18%25-F37626?style=flat-square&logo=jupyter&logoColor=white)
+![Python](https://img.shields.io/badge/Python-9%25-3776AB?style=flat-square&logo=python&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-9%25-3178c6?style=flat-square&logo=typescript&logoColor=white)
+![HTML](https://img.shields.io/badge/HTML-9%25-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSharp](https://img.shields.io/badge/C%23-9%25-239120?style=flat-square&logo=csharp&logoColor=white)
 
 </div>
 
