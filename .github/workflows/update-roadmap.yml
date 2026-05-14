@@ -1,18 +1,18 @@
-name: Update Roadmap
+﻿name: Update Roadmap
 
 on:
   schedule:
     - cron: '0 6 * * *'
   workflow_dispatch:
 
-# ── Edit these when you pass a cert ──────────────────────────────────────────
+# â”€â”€ Edit these when you pass a cert â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 env:
   AWS_CCP_DONE:  'false'
   SNOWPRO_DONE:  'false'
   AWS_DE_DONE:   'false'
   SQL_TARGET:    '5'
   PYTHON_TARGET: '14'
-# ─────────────────────────────────────────────────────────────────────────────
+# â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 jobs:
   update:
@@ -92,10 +92,10 @@ jobs:
 
           with open('roadmap.svg', 'w') as f:
             f.write(svg)
-          print(f"roadmap.svg generated — SQL:{sql}/{sql_t} Python:{python}/{py_t} CCP:{ccp} Snow:{snow} DE:{aws_de}")
+          print(f"roadmap.svg generated â€” SQL:{sql}/{sql_t} Python:{python}/{py_t} CCP:{ccp} Snow:{snow} DE:{aws_de}")
           PYEOF
 
-      - name: Generate langs.svg
+      - name: Generate stack.svg
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -135,10 +135,9 @@ jobs:
           }
           FALLBACK = ["#7c3aed", "#4f46e5", "#2563eb", "#29b5e8", "#34d399", "#f59e0b"]
 
-          R, CX, CY = 75, 150, 135
+          CX, CY, R = 635, 105, 60
           CIRC = 2 * math.pi * R
           GAP = 4
-          W, H = 300, 300
 
           segs = []
           cum = 0
@@ -149,38 +148,63 @@ jobs:
             segs.append((lang, pct, dash, cum, color))
             cum += pct * CIRC
 
-          seg_svg = ""
+          donut_svg = f'<circle cx="{CX}" cy="{CY}" r="{R}" fill="none" stroke="#161b22" stroke-width="26"/>\n'
           for lang, pct, dash, start, color in segs:
-            seg_svg += f'<circle cx="{CX}" cy="{CY}" r="{R}" fill="none" stroke="{color}" stroke-width="26" stroke-dasharray="{dash:.2f} {CIRC:.2f}" stroke-dashoffset="{-start:.2f}" transform="rotate(-90 {CX} {CY})" opacity=".9"/>\n'
+            donut_svg += f'<circle cx="{CX}" cy="{CY}" r="{R}" fill="none" stroke="{color}" stroke-width="24" stroke-dasharray="{dash:.2f} {CIRC:.2f}" stroke-dashoffset="{-start:.2f}" transform="rotate(-90 {CX} {CY})" opacity=".9"/>\n'
+
+          donut_svg += f'<text x="{CX}" y="{CY-8}" text-anchor="middle" font-family="\'Courier New\',monospace" font-size="10" fill="#484f58">repos</text>\n'
+          donut_svg += f'<text x="{CX}" y="{CY+12}" text-anchor="middle" font-family="\'Courier New\',monospace" font-size="22" font-weight="bold" fill="#8b949e">{len(public)}</text>\n'
 
           legend_svg = ""
           for i, (lang, pct, _, _, color) in enumerate(segs):
             col = i % 2
             row = i // 2
-            lx = 24 + col * 142
-            ly = 240 + row * 20
+            lx = 445 + col * 150
+            ly = 175 + row * 16
             legend_svg += f'<circle cx="{lx+5}" cy="{ly-4}" r="4" fill="{color}"/>\n'
             legend_svg += f'<text x="{lx+14}" y="{ly}" font-family="\'Courier New\',monospace" font-size="10" fill="#8b949e">{lang} <tspan fill="{color}">{pct*100:.1f}%</tspan></text>\n'
 
-          svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}">
-            <defs>
-              <pattern id="gl" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                <circle cx="1" cy="1" r=".8" fill="#21262d"/>
-              </pattern>
-            </defs>
-            <rect width="{W}" height="{H}" rx="12" fill="#0d1117"/>
-            <rect width="{W}" height="{H}" rx="12" fill="url(#gl)"/>
-            <text x="{W//2}" y="20" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" fill="#3d444d" letter-spacing="4">LANGUAGES</text>
-            <circle cx="{CX}" cy="{CY}" r="{R}" fill="none" stroke="#161b22" stroke-width="28"/>
-            {seg_svg}
-            <text x="{CX}" y="{CY-10}" text-anchor="middle" font-family="'Courier New',monospace" font-size="10" fill="#484f58">repos</text>
-            <text x="{CX}" y="{CY+14}" text-anchor="middle" font-family="'Courier New',monospace" font-size="24" font-weight="bold" fill="#8b949e">{len(public)}</text>
-            {legend_svg}
-          </svg>"""
+          svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 220">
+  <defs>
+    <pattern id="g" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r=".8" fill="#21262d"/>
+    </pattern>
+  </defs>
+  <rect width="840" height="220" rx="12" fill="#0d1117"/>
+  <rect width="840" height="220" rx="12" fill="url(#g)"/>
+  <text x="215" y="20" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" fill="#3d444d" letter-spacing="4">STACK</text>
+  <text x="635" y="20" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" fill="#3d444d" letter-spacing="4">LANGUAGES</text>
+  <line x1="430" y1="28" x2="430" y2="200" stroke="#21262d" stroke-width="1"/>
+  <text x="215" y="44" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#484f58" letter-spacing="2">DATA ENGINEERING</text>
+  <rect x="79"  y="52" width="64" height="22" rx="4" fill="#161b22" stroke="#3776ab" stroke-width="1"/>
+  <text x="111" y="67" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" fill="#3776ab">Python</text>
+  <rect x="153" y="52" width="90" height="22" rx="4" fill="#161b22" stroke="#336791" stroke-width="1"/>
+  <text x="198" y="67" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" fill="#336791">PostgreSQL</text>
+  <rect x="253" y="52" width="44" height="22" rx="4" fill="#161b22" stroke="#ff9900" stroke-width="1"/>
+  <text x="275" y="67" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" fill="#ff9900">AWS</text>
+  <rect x="307" y="52" width="44" height="22" rx="4" fill="#161b22" stroke="#f05032" stroke-width="1"/>
+  <text x="329" y="67" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" fill="#f05032">Git</text>
+  <text x="215" y="92" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#484f58" letter-spacing="2">WEB &amp; BACKEND</text>
+  <rect x="87"  y="100" width="70" height="22" rx="4" fill="#161b22" stroke="#f0f6fc" stroke-width="1"/>
+  <text x="122" y="115" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" fill="#f0f6fc">Next.js</text>
+  <rect x="167" y="100" width="90" height="22" rx="4" fill="#161b22" stroke="#3178c6" stroke-width="1"/>
+  <text x="212" y="115" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" fill="#3178c6">TypeScript</text>
+  <rect x="267" y="100" width="77" height="22" rx="4" fill="#161b22" stroke="#3ecf8e" stroke-width="1"/>
+  <text x="305" y="115" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" fill="#3ecf8e">Supabase</text>
+  <text x="215" y="140" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#484f58" letter-spacing="2">BACKGROUND</text>
+  <rect x="113" y="148" width="57" height="22" rx="4" fill="#161b22" stroke="#8b949e" stroke-width="1"/>
+  <text x="141" y="163" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" fill="#8b949e">Unity</text>
+  <rect x="180" y="148" width="70" height="22" rx="4" fill="#161b22" stroke="#ea7600" stroke-width="1"/>
+  <text x="215" y="163" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" fill="#ea7600">Blender</text>
+  <rect x="260" y="148" width="57" height="22" rx="4" fill="#161b22" stroke="#f24e1e" stroke-width="1"/>
+  <text x="288" y="163" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" fill="#f24e1e">Figma</text>
+  {donut_svg}
+  {legend_svg}
+</svg>"""
 
           with open('langs.svg', 'w') as f:
             f.write(svg)
-          print(f"langs.svg generated — {[l for l,_ in top]}")
+          print(f"langs.svg generated â€” {[l for l,_ in top]}")
           PYEOF
 
       - name: Commit if changed
@@ -189,3 +213,4 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add roadmap.svg langs.svg
           git diff --staged --quiet || (git commit -m "chore: update roadmap and language stats" && git push)
+

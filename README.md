@@ -35,30 +35,20 @@ josh = {
 ## Stack
 
 <div align="center">
+<table>
+<tr>
+<td align="center" width="50%">
 
-**Data Engineering**
+<img src="./stack-icons.png" width="300" alt="Stack"/>
 
-[![Python](https://skillicons.dev/icons?i=python)](https://python.org)
-[![PostgreSQL](https://skillicons.dev/icons?i=postgres)](https://postgresql.org)
-[![AWS](https://skillicons.dev/icons?i=aws)](https://aws.amazon.com)
-[![Git](https://skillicons.dev/icons?i=git)](https://git-scm.com)
+</td>
+<td align="center" width="50%">
+<br/><br/><br/>
+<img src="./langs.svg" width="280" alt="Language Stats"/>
 
-**Web & Backend**
-
-[![Next.js](https://skillicons.dev/icons?i=nextjs)](https://nextjs.org)
-[![TypeScript](https://skillicons.dev/icons?i=ts)](https://typescriptlang.org)
-[![Supabase](https://skillicons.dev/icons?i=supabase)](https://supabase.com)
-
-**Background**
-
-[![Unity](https://skillicons.dev/icons?i=unity)](https://unity.com)
-[![Blender](https://skillicons.dev/icons?i=blender)](https://blender.org)
-[![Figma](https://skillicons.dev/icons?i=figma)](https://figma.com)
-
-<br/>
-
-<img src="./langs.svg" width="400" alt="Language Stats"/>
-
+</td>
+</tr>
+</table>
 </div>
 
 ---
