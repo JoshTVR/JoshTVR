@@ -8,35 +8,35 @@
   <rect width="840" height="232" rx="12" fill="url(#g)"/>
   <text x="420" y="22" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" fill="#3d444d" letter-spacing="4">DE ROADMAP</text>
   <line x1="20" y1="32" x2="820" y2="32" stroke="#21262d" stroke-width="1"/>
-
-  <!-- SQL Fundamentals -->
+  
   <text x="20" y="63" font-family="'Courier New',monospace" font-size="11" fill="#8b949e">SQL Fundamentals</text>
   <rect x="228" y="52" width="462" height="14" rx="7" fill="#161b22"/>
-  <rect x="228" y="52" width="92" height="14" rx="7" fill="#f59e0b" opacity=".85"/>
-  <text x="704" y="63" font-family="'Courier New',monospace" font-size="10" fill="#f59e0b">20%</text>
+  <rect x="228" y="52" width="277" height="14" rx="7" fill="#f59e0b" opacity=".85"/>
+  <text x="704" y="63" font-family="'Courier New',monospace" font-size="10" fill="#f59e0b">60%</text>
   <text x="748" y="63" font-family="'Courier New',monospace" font-size="9" fill="#f59e0b">IN PROGRESS</text>
 
-  <!-- Python Fundamentals -->
   <text x="20" y="101" font-family="'Courier New',monospace" font-size="11" fill="#8b949e">Python Fundamentals</text>
   <rect x="228" y="90" width="462" height="14" rx="7" fill="#161b22"/>
+  
   <text x="704" y="101" font-family="'Courier New',monospace" font-size="10" fill="#3776ab">0%</text>
   <text x="748" y="101" font-family="'Courier New',monospace" font-size="9" fill="#3d444d">UPCOMING</text>
 
-  <!-- AWS Cloud Practitioner -->
   <text x="20" y="139" font-family="'Courier New',monospace" font-size="11" fill="#8b949e">AWS Cloud Practitioner</text>
   <rect x="228" y="128" width="462" height="14" rx="7" fill="#161b22"/>
+  
   <text x="704" y="139" font-family="'Courier New',monospace" font-size="10" fill="#ff9900">0%</text>
   <text x="748" y="139" font-family="'Courier New',monospace" font-size="9" fill="#3d444d">UPCOMING</text>
 
-  <!-- Snowflake Core -->
   <text x="20" y="177" font-family="'Courier New',monospace" font-size="11" fill="#8b949e">Snowflake Core</text>
   <rect x="228" y="166" width="462" height="14" rx="7" fill="#161b22"/>
+  
   <text x="704" y="177" font-family="'Courier New',monospace" font-size="10" fill="#29b5e8">0%</text>
   <text x="748" y="177" font-family="'Courier New',monospace" font-size="9" fill="#3d444d">UPCOMING</text>
 
-  <!-- AWS DE Associate -->
   <text x="20" y="215" font-family="'Courier New',monospace" font-size="11" fill="#8b949e">AWS DE Associate</text>
   <rect x="228" y="204" width="462" height="14" rx="7" fill="#161b22"/>
+  
   <text x="704" y="215" font-family="'Courier New',monospace" font-size="10" fill="#7c3aed">0%</text>
   <text x="748" y="215" font-family="'Courier New',monospace" font-size="9" fill="#3d444d">UPCOMING</text>
+
 </svg>
