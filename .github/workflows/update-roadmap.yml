@@ -1,18 +1,18 @@
-﻿name: Update Roadmap
+name: Update Roadmap
 
 on:
   schedule:
     - cron: '0 6 * * *'
   workflow_dispatch:
 
-# â”€â”€ Edit these when you pass a cert â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# ── Edit these when you pass a cert ──────────────────────────────────────────
 env:
   AWS_CCP_DONE:  'false'
   SNOWPRO_DONE:  'false'
   AWS_DE_DONE:   'false'
   SQL_TARGET:    '5'
   PYTHON_TARGET: '14'
-# â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# ─────────────────────────────────────────────────────────────────────────────
 
 jobs:
   update:
@@ -92,10 +92,10 @@ jobs:
 
           with open('roadmap.svg', 'w') as f:
             f.write(svg)
-          print(f"roadmap.svg generated â€” SQL:{sql}/{sql_t} Python:{python}/{py_t} CCP:{ccp} Snow:{snow} DE:{aws_de}")
+          print(f"roadmap.svg generated — SQL:{sql}/{sql_t} Python:{python}/{py_t} CCP:{ccp} Snow:{snow} DE:{aws_de}")
           PYEOF
 
-      - name: Generate stack.svg
+      - name: Generate langs.svg
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -204,7 +204,7 @@ jobs:
 
           with open('langs.svg', 'w') as f:
             f.write(svg)
-          print(f"langs.svg generated â€” {[l for l,_ in top]}")
+          print(f"langs.svg generated — {[l for l,_ in top]}")
           PYEOF
 
       - name: Commit if changed
