@@ -59,7 +59,7 @@ josh = {
 
 </td>
 <td align="center" valign="middle" width="45%">
-
+<br/><br/><br/><br/><br/>
 <img src="./langs.svg" width="260" alt="Language Stats"/>
 
 </td>
