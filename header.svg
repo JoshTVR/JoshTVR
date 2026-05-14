@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 180">
+  <defs>
+    <style>
+      @keyframes dash    { to { stroke-dashoffset: -24; } }
+      @keyframes glow    { 0%,100%{opacity:.5} 50%{opacity:1} }
+      @keyframes pulse   { 0%,100%{r:3} 50%{r:5} }
+      @keyframes shimmer { 0%,100%{opacity:1} 40%{opacity:.6} 60%{opacity:1} }
+      @keyframes float1  { 0%,100%{transform:translate(0,0);opacity:.18} 50%{transform:translate(8px,-14px);opacity:.45} }
+      @keyframes float2  { 0%,100%{transform:translate(0,0);opacity:.22} 50%{transform:translate(-10px,10px);opacity:.5} }
+      @keyframes float3  { 0%,100%{transform:translate(0,0);opacity:.15} 50%{transform:translate(12px,8px);opacity:.4} }
+      @keyframes float4  { 0%,100%{transform:translate(0,0);opacity:.2} 50%{transform:translate(-7px,-12px);opacity:.48} }
+      @keyframes float5  { 0%,100%{transform:translate(0,0);opacity:.12} 50%{transform:translate(9px,11px);opacity:.38} }
+      @keyframes float6  { 0%,100%{transform:translate(0,0);opacity:.25} 50%{transform:translate(-11px,-8px);opacity:.5} }
+      @keyframes float7  { 0%,100%{transform:translate(0,0);opacity:.17} 50%{transform:translate(6px,-10px);opacity:.42} }
+      @keyframes float8  { 0%,100%{transform:translate(0,0);opacity:.2} 50%{transform:translate(-8px,13px);opacity:.45} }
+      @keyframes nodeGlow { 0%,100%{stroke-opacity:.4} 50%{stroke-opacity:1} }
+      .pipe   { animation: dash 1.2s linear infinite; }
+      .dot1   { animation: glow 2.4s ease-in-out infinite; }
+      .dot2   { animation: glow 2.4s ease-in-out infinite; animation-delay:.8s; }
+      .dot3   { animation: glow 2.4s ease-in-out infinite; animation-delay:1.6s; }
+      .node1  { animation: nodeGlow 2.4s ease-in-out infinite; }
+      .node2  { animation: nodeGlow 2.4s ease-in-out infinite; animation-delay:.6s; }
+      .node3  { animation: nodeGlow 2.4s ease-in-out infinite; animation-delay:1.2s; }
+      .node4  { animation: nodeGlow 2.4s ease-in-out infinite; animation-delay:1.8s; }
+      .title  { animation: shimmer 5s ease-in-out infinite; }
+      .p1 { animation: float1 6s ease-in-out infinite; }
+      .p2 { animation: float2 7.5s ease-in-out infinite; animation-delay:1s; }
+      .p3 { animation: float3 5.5s ease-in-out infinite; animation-delay:2s; }
+      .p4 { animation: float4 8s ease-in-out infinite; animation-delay:.5s; }
+      .p5 { animation: float5 6.5s ease-in-out infinite; animation-delay:3s; }
+      .p6 { animation: float6 7s ease-in-out infinite; animation-delay:1.5s; }
+      .p7 { animation: float7 5s ease-in-out infinite; animation-delay:2.5s; }
+      .p8 { animation: float8 9s ease-in-out infinite; animation-delay:.8s; }
+    </style>
+    <pattern id="g" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r=".8" fill="#21262d"/>
+    </pattern>
+  </defs>
+
+  <rect width="840" height="180" rx="12" fill="#0d1117"/>
+  <rect width="840" height="180" rx="12" fill="url(#g)"/>
+
+  <!-- Floating background particles -->
+  <circle cx="60"  cy="30"  r="2.5" fill="#7c3aed" class="p1"/>
+  <circle cx="180" cy="155" r="2"   fill="#4f46e5" class="p2"/>
+  <circle cx="320" cy="20"  r="3"   fill="#2563eb" class="p3"/>
+  <circle cx="500" cy="160" r="2"   fill="#7c3aed" class="p4"/>
+  <circle cx="640" cy="25"  r="2.5" fill="#4f46e5" class="p5"/>
+  <circle cx="760" cy="150" r="3"   fill="#2563eb" class="p6"/>
+  <circle cx="780" cy="40"  r="2"   fill="#7c3aed" class="p7"/>
+  <circle cx="90"  cy="145" r="2.5" fill="#4f46e5" class="p8"/>
+
+  <text x="420" y="50" text-anchor="middle" font-family="'Courier New',monospace" font-size="44" font-weight="bold" fill="#f0f6fc" class="title">JoshTVR</text>
+  <text x="420" y="74" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" fill="#7c3aed" letter-spacing="4">DATA ENGINEER · FULL-STACK · BUILDER</text>
+
+  <!-- Pipeline nodes with pulsing borders -->
+  <rect x="120" y="108" width="90" height="28" rx="6" fill="none" stroke="#7c3aed" stroke-width="1.5" class="node1"/>
+  <text x="165" y="127" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" fill="#8b949e">INGEST</text>
+
+  <circle cx="210" cy="122" r="3" fill="#7c3aed" class="dot1"/>
+  <line x1="210" y1="122" x2="310" y2="122" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="6 3" class="pipe" opacity=".7"/>
+
+  <rect x="310" y="108" width="90" height="28" rx="6" fill="none" stroke="#4f46e5" stroke-width="1.5" class="node2"/>
+  <text x="355" y="127" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" fill="#8b949e">TRANSFORM</text>
+
+  <circle cx="400" cy="122" r="3" fill="#4f46e5" class="dot2"/>
+  <line x1="400" y1="122" x2="500" y2="122" stroke="#4f46e5" stroke-width="1.5" stroke-dasharray="6 3" class="pipe" style="animation-delay:.5s" opacity=".7"/>
+
+  <rect x="500" y="108" width="90" height="28" rx="6" fill="none" stroke="#2563eb" stroke-width="1.5" class="node3"/>
+  <text x="545" y="127" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" fill="#8b949e">LOAD</text>
+
+  <circle cx="590" cy="122" r="3" fill="#2563eb" class="dot3"/>
+  <line x1="590" y1="122" x2="690" y2="122" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="6 3" class="pipe" style="animation-delay:1s" opacity=".7"/>
+
+  <rect x="690" y="108" width="90" height="28" rx="6" fill="none" stroke="#29b5e8" stroke-width="1.5" class="node4"/>
+  <text x="735" y="127" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" fill="#8b949e">SERVE</text>
+
+  <text x="420" y="165" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" fill="#3d444d">Pachuca, Mexico · joshtvr.com · building in public</text>
+</svg>

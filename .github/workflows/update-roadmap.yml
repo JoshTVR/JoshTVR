@@ -1,0 +1,103 @@
+name: Update Roadmap
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+# ── Edit these when you pass a cert ──────────────────────────────────────────
+env:
+  AWS_CCP_DONE:  'false'
+  SNOWPRO_DONE:  'false'
+  AWS_DE_DONE:   'false'
+  SQL_TARGET:    '5'
+  PYTHON_TARGET: '14'
+# ─────────────────────────────────────────────────────────────────────────────
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch commit counts from data-engineering-journey
+        id: counts
+        run: |
+          SQL=$(curl -s "https://api.github.com/repos/JoshTVR/data-engineering-journey/commits?path=SQL&per_page=100" \
+            | python3 -c "import sys,json; d=json.load(sys.stdin); print(len(d) if isinstance(d,list) else 0)")
+          PYTHON=$(curl -s "https://api.github.com/repos/JoshTVR/data-engineering-journey/commits?path=Python&per_page=100" \
+            | python3 -c "import sys,json; d=json.load(sys.stdin); print(len(d) if isinstance(d,list) else 0)")
+          echo "sql=$SQL" >> $GITHUB_OUTPUT
+          echo "python=$PYTHON" >> $GITHUB_OUTPUT
+
+      - name: Generate roadmap.svg
+        env:
+          SQL_COMMITS:    ${{ steps.counts.outputs.sql }}
+          PYTHON_COMMITS: ${{ steps.counts.outputs.python }}
+        run: |
+          python3 - << 'PYEOF'
+          import os, math
+
+          sql     = int(os.environ.get('SQL_COMMITS', '0'))
+          python  = int(os.environ.get('PYTHON_COMMITS', '0'))
+          ccp     = os.environ.get('AWS_CCP_DONE', 'false').lower() == 'true'
+          snow    = os.environ.get('SNOWPRO_DONE', 'false').lower() == 'true'
+          aws_de  = os.environ.get('AWS_DE_DONE', 'false').lower() == 'true'
+          sql_t   = int(os.environ.get('SQL_TARGET', '5'))
+          py_t    = int(os.environ.get('PYTHON_TARGET', '14'))
+
+          stages = [
+            ("SQL Fundamentals",       min(sql / sql_t, 1.0),   "#f59e0b"),
+            ("Python Fundamentals",    min(python / py_t, 1.0), "#3776ab"),
+            ("AWS Cloud Practitioner", 1.0 if ccp   else 0.0,   "#ff9900"),
+            ("Snowflake Core",         1.0 if snow  else 0.0,   "#29b5e8"),
+            ("AWS DE Associate",       1.0 if aws_de else 0.0,  "#7c3aed"),
+          ]
+
+          W, H = 840, 232
+          BAR_X, BAR_W, BAR_H = 228, 462, 14
+          LABEL_X, START_Y, ROW_SPACING = 20, 52, 38
+
+          rows = ""
+          for i, (label, progress, color) in enumerate(stages):
+            y    = START_Y + i * ROW_SPACING
+            pct  = int(progress * 100)
+            fw   = int(BAR_W * progress)
+            if pct == 100:  status, sc = "DONE",        "#34d399"
+            elif pct > 0:   status, sc = "IN PROGRESS", color
+            else:           status, sc = "UPCOMING",    "#3d444d"
+            fill = f'<rect x="{BAR_X}" y="{y}" width="{fw}" height="{BAR_H}" rx="7" fill="{color}" opacity=".85"/>' if fw > 0 else ''
+            rows += f'''
+            <text x="{LABEL_X}" y="{y+11}" font-family="'Courier New',monospace" font-size="11" fill="#8b949e">{label}</text>
+            <rect x="{BAR_X}" y="{y}" width="{BAR_W}" height="{BAR_H}" rx="7" fill="#161b22"/>
+            {fill}
+            <text x="{BAR_X+BAR_W+14}" y="{y+11}" font-family="'Courier New',monospace" font-size="10" fill="{color}">{pct}%</text>
+            <text x="{BAR_X+BAR_W+58}" y="{y+11}" font-family="'Courier New',monospace" font-size="9" fill="{sc}">{status}</text>
+          '''
+
+          svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}">
+            <defs>
+              <pattern id="g" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <circle cx="1" cy="1" r=".8" fill="#21262d"/>
+              </pattern>
+            </defs>
+            <rect width="{W}" height="{H}" rx="12" fill="#0d1117"/>
+            <rect width="{W}" height="{H}" rx="12" fill="url(#g)"/>
+            <text x="420" y="22" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" fill="#3d444d" letter-spacing="4">DE ROADMAP</text>
+            <line x1="20" y1="32" x2="{W-20}" y2="32" stroke="#21262d" stroke-width="1"/>
+            {rows}
+          </svg>'''
+
+          with open('roadmap.svg', 'w') as f:
+            f.write(svg)
+          print(f"roadmap.svg generated — SQL:{sql}/{sql_t} Python:{python}/{py_t} CCP:{ccp} Snow:{snow} DE:{aws_de}")
+          PYEOF
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add roadmap.svg
+          git diff --staged --quiet || (git commit -m "chore: update roadmap progress" && git push)
