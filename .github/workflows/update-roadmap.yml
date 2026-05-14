@@ -135,10 +135,10 @@ jobs:
           }
           FALLBACK = ["#7c3aed", "#4f46e5", "#2563eb", "#29b5e8", "#34d399", "#f59e0b"]
 
-          R, CX, CY = 75, 150, 155
+          R, CX, CY = 75, 150, 135
           CIRC = 2 * math.pi * R
           GAP = 4
-          W, H = 300, 360
+          W, H = 300, 300
 
           segs = []
           cum = 0
@@ -158,7 +158,7 @@ jobs:
             col = i % 2
             row = i // 2
             lx = 24 + col * 142
-            ly = 262 + row * 20
+            ly = 240 + row * 20
             legend_svg += f'<circle cx="{lx+5}" cy="{ly-4}" r="4" fill="{color}"/>\n'
             legend_svg += f'<text x="{lx+14}" y="{ly}" font-family="\'Courier New\',monospace" font-size="10" fill="#8b949e">{lang} <tspan fill="{color}">{pct*100:.1f}%</tspan></text>\n'
 

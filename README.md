@@ -34,9 +34,7 @@ josh = {
 
 ## Stack
 
-<table>
-<tr>
-<td align="center" valign="top" width="55%">
+<div align="center">
 
 **Data Engineering**
 
@@ -57,14 +55,11 @@ josh = {
 [![Blender](https://skillicons.dev/icons?i=blender)](https://blender.org)
 [![Figma](https://skillicons.dev/icons?i=figma)](https://figma.com)
 
-</td>
-<td align="center" valign="middle" width="45%">
-<br/><br/><br/><br/><br/>
-<img src="./langs.svg" width="260" alt="Language Stats"/>
+<br/>
 
-</td>
-</tr>
-</table>
+<img src="./langs.svg" width="400" alt="Language Stats"/>
+
+</div>
 
 ---
 
