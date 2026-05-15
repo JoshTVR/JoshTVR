@@ -15,17 +15,17 @@
   <circle cx="150" cy="135" r="75" fill="none" stroke="#3776ab" stroke-width="26" stroke-dasharray="0.00 471.24" stroke-dashoffset="-466.99" transform="rotate(-90 150 135)" opacity=".9"/>
   <circle cx="150" cy="135" r="75" fill="none" stroke="#4f46e5" stroke-width="26" stroke-dasharray="0.00 471.24" stroke-dashoffset="-469.24" transform="rotate(-90 150 135)" opacity=".9"/>
   <text x="150" y="125" text-anchor="middle" font-family="'Courier New',monospace" font-size="10" fill="#484f58">repos</text>
-  <text x="150" y="149" text-anchor="middle" font-family="'Courier New',monospace" font-size="24" font-weight="bold" fill="#8b949e">14</text>
-  <circle cx="29" cy="236" r="4" fill="#7c3aed"/>
-  <text x="38" y="240" font-family="'Courier New',monospace" font-size="10" fill="#8b949e">Jupyter Notebook <tspan fill="#7c3aed">60.7%</tspan></text>
-  <circle cx="171" cy="236" r="4" fill="#4f46e5"/>
-  <text x="180" y="240" font-family="'Courier New',monospace" font-size="10" fill="#8b949e">TSQL <tspan fill="#4f46e5">34.5%</tspan></text>
-  <circle cx="29" cy="256" r="4" fill="#3178c6"/>
-  <text x="38" y="260" font-family="'Courier New',monospace" font-size="10" fill="#8b949e">TypeScript <tspan fill="#3178c6">3.3%</tspan></text>
-  <circle cx="171" cy="256" r="4" fill="#e34c26"/>
-  <text x="180" y="260" font-family="'Courier New',monospace" font-size="10" fill="#8b949e">HTML <tspan fill="#e34c26">0.5%</tspan></text>
-  <circle cx="29" cy="276" r="4" fill="#3776ab"/>
-  <text x="38" y="280" font-family="'Courier New',monospace" font-size="10" fill="#8b949e">Python <tspan fill="#3776ab">0.5%</tspan></text>
-  <circle cx="171" cy="276" r="4" fill="#4f46e5"/>
-  <text x="180" y="280" font-family="'Courier New',monospace" font-size="10" fill="#8b949e">ShaderLab <tspan fill="#4f46e5">0.4%</tspan></text>
+  <text x="150" y="147" text-anchor="middle" font-family="'Courier New',monospace" font-size="24" font-weight="bold" fill="#8b949e">14</text>
+  <circle cx="29" cy="232" r="4" fill="#7c3aed"/>
+  <text x="39" y="236" font-family="'Courier New',monospace" font-size="10" fill="#8b949e">Jupyter Notebook <tspan fill="#7c3aed">60.7%</tspan></text>
+  <circle cx="171" cy="232" r="4" fill="#4f46e5"/>
+  <text x="181" y="236" font-family="'Courier New',monospace" font-size="10" fill="#8b949e">TSQL <tspan fill="#4f46e5">34.5%</tspan></text>
+  <circle cx="29" cy="252" r="4" fill="#3178c6"/>
+  <text x="39" y="256" font-family="'Courier New',monospace" font-size="10" fill="#8b949e">TypeScript <tspan fill="#3178c6">3.3%</tspan></text>
+  <circle cx="171" cy="252" r="4" fill="#e34c26"/>
+  <text x="181" y="256" font-family="'Courier New',monospace" font-size="10" fill="#8b949e">HTML <tspan fill="#e34c26">0.5%</tspan></text>
+  <circle cx="29" cy="272" r="4" fill="#3776ab"/>
+  <text x="39" y="276" font-family="'Courier New',monospace" font-size="10" fill="#8b949e">Python <tspan fill="#3776ab">0.5%</tspan></text>
+  <circle cx="171" cy="272" r="4" fill="#4f46e5"/>
+  <text x="181" y="276" font-family="'Courier New',monospace" font-size="10" fill="#8b949e">ShaderLab <tspan fill="#4f46e5">0.4%</tspan></text>
 </svg>
