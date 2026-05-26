@@ -8,11 +8,11 @@
   <rect width="300" height="300" rx="12" fill="url(#gl)"/>
   <text x="150" y="20" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" fill="#3d444d" letter-spacing="4">LANGUAGES</text>
   <circle cx="150" cy="135" r="75" fill="none" stroke="#161b22" stroke-width="28"/>
-  <circle cx="150" cy="135" r="75" fill="none" stroke="#7c3aed" stroke-width="26" stroke-dasharray="281.44 471.24" stroke-dashoffset="0.00" transform="rotate(-90 150 135)" opacity=".9"/>
-  <circle cx="150" cy="135" r="75" fill="none" stroke="#4f46e5" stroke-width="26" stroke-dasharray="157.82 471.24" stroke-dashoffset="-285.44" transform="rotate(-90 150 135)" opacity=".9"/>
-  <circle cx="150" cy="135" r="75" fill="none" stroke="#3178c6" stroke-width="26" stroke-dasharray="11.56 471.24" stroke-dashoffset="-447.26" transform="rotate(-90 150 135)" opacity=".9"/>
-  <circle cx="150" cy="135" r="75" fill="none" stroke="#e34c26" stroke-width="26" stroke-dasharray="0.19 471.24" stroke-dashoffset="-462.82" transform="rotate(-90 150 135)" opacity=".9"/>
-  <circle cx="150" cy="135" r="75" fill="none" stroke="#3776ab" stroke-width="26" stroke-dasharray="0.00 471.24" stroke-dashoffset="-467.01" transform="rotate(-90 150 135)" opacity=".9"/>
+  <circle cx="150" cy="135" r="75" fill="none" stroke="#7c3aed" stroke-width="26" stroke-dasharray="281.45 471.24" stroke-dashoffset="0.00" transform="rotate(-90 150 135)" opacity=".9"/>
+  <circle cx="150" cy="135" r="75" fill="none" stroke="#4f46e5" stroke-width="26" stroke-dasharray="157.79 471.24" stroke-dashoffset="-285.45" transform="rotate(-90 150 135)" opacity=".9"/>
+  <circle cx="150" cy="135" r="75" fill="none" stroke="#3178c6" stroke-width="26" stroke-dasharray="11.56 471.24" stroke-dashoffset="-447.25" transform="rotate(-90 150 135)" opacity=".9"/>
+  <circle cx="150" cy="135" r="75" fill="none" stroke="#e34c26" stroke-width="26" stroke-dasharray="0.19 471.24" stroke-dashoffset="-462.81" transform="rotate(-90 150 135)" opacity=".9"/>
+  <circle cx="150" cy="135" r="75" fill="none" stroke="#3776ab" stroke-width="26" stroke-dasharray="0.00 471.24" stroke-dashoffset="-466.99" transform="rotate(-90 150 135)" opacity=".9"/>
   <circle cx="150" cy="135" r="75" fill="none" stroke="#4f46e5" stroke-width="26" stroke-dasharray="0.00 471.24" stroke-dashoffset="-469.26" transform="rotate(-90 150 135)" opacity=".9"/>
   <text x="150" y="125" text-anchor="middle" font-family="'Courier New',monospace" font-size="10" fill="#484f58">repos</text>
   <text x="150" y="147" text-anchor="middle" font-family="'Courier New',monospace" font-size="24" font-weight="bold" fill="#8b949e">15</text>
