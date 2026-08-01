@@ -8,9 +8,9 @@
   <rect width="300" height="300" rx="12" fill="url(#gl)"/>
   <text x="150" y="20" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" fill="#3d444d" letter-spacing="4">LANGUAGES</text>
   <circle cx="150" cy="135" r="75" fill="none" stroke="#161b22" stroke-width="28"/>
-  <circle cx="150" cy="135" r="75" fill="none" stroke="#7c3aed" stroke-width="26" stroke-dasharray="281.41 471.24" stroke-dashoffset="0.00" transform="rotate(-90 150 135)" opacity=".9"/>
-  <circle cx="150" cy="135" r="75" fill="none" stroke="#4f46e5" stroke-width="26" stroke-dasharray="157.77 471.24" stroke-dashoffset="-285.41" transform="rotate(-90 150 135)" opacity=".9"/>
-  <circle cx="150" cy="135" r="75" fill="none" stroke="#3178c6" stroke-width="26" stroke-dasharray="11.62 471.24" stroke-dashoffset="-447.18" transform="rotate(-90 150 135)" opacity=".9"/>
+  <circle cx="150" cy="135" r="75" fill="none" stroke="#7c3aed" stroke-width="26" stroke-dasharray="281.44 471.24" stroke-dashoffset="0.00" transform="rotate(-90 150 135)" opacity=".9"/>
+  <circle cx="150" cy="135" r="75" fill="none" stroke="#4f46e5" stroke-width="26" stroke-dasharray="157.75 471.24" stroke-dashoffset="-285.44" transform="rotate(-90 150 135)" opacity=".9"/>
+  <circle cx="150" cy="135" r="75" fill="none" stroke="#3178c6" stroke-width="26" stroke-dasharray="11.61 471.24" stroke-dashoffset="-447.19" transform="rotate(-90 150 135)" opacity=".9"/>
   <circle cx="150" cy="135" r="75" fill="none" stroke="#e34c26" stroke-width="26" stroke-dasharray="0.19 471.24" stroke-dashoffset="-462.80" transform="rotate(-90 150 135)" opacity=".9"/>
   <circle cx="150" cy="135" r="75" fill="none" stroke="#3776ab" stroke-width="26" stroke-dasharray="0.00 471.24" stroke-dashoffset="-466.99" transform="rotate(-90 150 135)" opacity=".9"/>
   <circle cx="150" cy="135" r="75" fill="none" stroke="#4f46e5" stroke-width="26" stroke-dasharray="0.00 471.24" stroke-dashoffset="-469.26" transform="rotate(-90 150 135)" opacity=".9"/>
