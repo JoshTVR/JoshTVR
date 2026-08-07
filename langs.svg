@@ -8,16 +8,16 @@
   <rect width="300" height="300" rx="12" fill="url(#gl)"/>
   <text x="150" y="20" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" fill="#3d444d" letter-spacing="4">LANGUAGES</text>
   <circle cx="150" cy="135" r="75" fill="none" stroke="#161b22" stroke-width="28"/>
-  <circle cx="150" cy="135" r="75" fill="none" stroke="#7c3aed" stroke-width="26" stroke-dasharray="281.44 471.24" stroke-dashoffset="0.00" transform="rotate(-90 150 135)" opacity=".9"/>
-  <circle cx="150" cy="135" r="75" fill="none" stroke="#4f46e5" stroke-width="26" stroke-dasharray="157.75 471.24" stroke-dashoffset="-285.44" transform="rotate(-90 150 135)" opacity=".9"/>
-  <circle cx="150" cy="135" r="75" fill="none" stroke="#3178c6" stroke-width="26" stroke-dasharray="11.61 471.24" stroke-dashoffset="-447.19" transform="rotate(-90 150 135)" opacity=".9"/>
+  <circle cx="150" cy="135" r="75" fill="none" stroke="#7c3aed" stroke-width="26" stroke-dasharray="281.33 471.24" stroke-dashoffset="0.00" transform="rotate(-90 150 135)" opacity=".9"/>
+  <circle cx="150" cy="135" r="75" fill="none" stroke="#4f46e5" stroke-width="26" stroke-dasharray="157.69 471.24" stroke-dashoffset="-285.33" transform="rotate(-90 150 135)" opacity=".9"/>
+  <circle cx="150" cy="135" r="75" fill="none" stroke="#3178c6" stroke-width="26" stroke-dasharray="11.78 471.24" stroke-dashoffset="-447.03" transform="rotate(-90 150 135)" opacity=".9"/>
   <circle cx="150" cy="135" r="75" fill="none" stroke="#e34c26" stroke-width="26" stroke-dasharray="0.19 471.24" stroke-dashoffset="-462.80" transform="rotate(-90 150 135)" opacity=".9"/>
-  <circle cx="150" cy="135" r="75" fill="none" stroke="#3776ab" stroke-width="26" stroke-dasharray="0.00 471.24" stroke-dashoffset="-466.99" transform="rotate(-90 150 135)" opacity=".9"/>
+  <circle cx="150" cy="135" r="75" fill="none" stroke="#3776ab" stroke-width="26" stroke-dasharray="0.00 471.24" stroke-dashoffset="-467.00" transform="rotate(-90 150 135)" opacity=".9"/>
   <circle cx="150" cy="135" r="75" fill="none" stroke="#4f46e5" stroke-width="26" stroke-dasharray="0.00 471.24" stroke-dashoffset="-469.26" transform="rotate(-90 150 135)" opacity=".9"/>
   <text x="150" y="125" text-anchor="middle" font-family="'Courier New',monospace" font-size="10" fill="#484f58">repos</text>
-  <text x="150" y="147" text-anchor="middle" font-family="'Courier New',monospace" font-size="24" font-weight="bold" fill="#8b949e">15</text>
+  <text x="150" y="147" text-anchor="middle" font-family="'Courier New',monospace" font-size="24" font-weight="bold" fill="#8b949e">16</text>
   <circle cx="29" cy="232" r="4" fill="#7c3aed"/>
-  <text x="39" y="236" font-family="'Courier New',monospace" font-size="10" fill="#8b949e">Jupyter Notebook <tspan fill="#7c3aed">60.6%</tspan></text>
+  <text x="39" y="236" font-family="'Courier New',monospace" font-size="10" fill="#8b949e">Jupyter Notebook <tspan fill="#7c3aed">60.5%</tspan></text>
   <circle cx="171" cy="232" r="4" fill="#4f46e5"/>
   <text x="181" y="236" font-family="'Courier New',monospace" font-size="10" fill="#8b949e">TSQL <tspan fill="#4f46e5">34.3%</tspan></text>
   <circle cx="29" cy="252" r="4" fill="#3178c6"/>
