@@ -8,9 +8,9 @@
   <rect width="300" height="300" rx="12" fill="url(#gl)"/>
   <text x="150" y="20" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" fill="#3d444d" letter-spacing="4">LANGUAGES</text>
   <circle cx="150" cy="135" r="75" fill="none" stroke="#161b22" stroke-width="28"/>
-  <circle cx="150" cy="135" r="75" fill="none" stroke="#7c3aed" stroke-width="26" stroke-dasharray="281.33 471.24" stroke-dashoffset="0.00" transform="rotate(-90 150 135)" opacity=".9"/>
-  <circle cx="150" cy="135" r="75" fill="none" stroke="#4f46e5" stroke-width="26" stroke-dasharray="157.69 471.24" stroke-dashoffset="-285.33" transform="rotate(-90 150 135)" opacity=".9"/>
-  <circle cx="150" cy="135" r="75" fill="none" stroke="#3178c6" stroke-width="26" stroke-dasharray="11.78 471.24" stroke-dashoffset="-447.03" transform="rotate(-90 150 135)" opacity=".9"/>
+  <circle cx="150" cy="135" r="75" fill="none" stroke="#7c3aed" stroke-width="26" stroke-dasharray="281.28 471.24" stroke-dashoffset="0.00" transform="rotate(-90 150 135)" opacity=".9"/>
+  <circle cx="150" cy="135" r="75" fill="none" stroke="#4f46e5" stroke-width="26" stroke-dasharray="157.66 471.24" stroke-dashoffset="-285.28" transform="rotate(-90 150 135)" opacity=".9"/>
+  <circle cx="150" cy="135" r="75" fill="none" stroke="#3178c6" stroke-width="26" stroke-dasharray="11.86 471.24" stroke-dashoffset="-446.95" transform="rotate(-90 150 135)" opacity=".9"/>
   <circle cx="150" cy="135" r="75" fill="none" stroke="#e34c26" stroke-width="26" stroke-dasharray="0.19 471.24" stroke-dashoffset="-462.80" transform="rotate(-90 150 135)" opacity=".9"/>
   <circle cx="150" cy="135" r="75" fill="none" stroke="#3776ab" stroke-width="26" stroke-dasharray="0.00 471.24" stroke-dashoffset="-467.00" transform="rotate(-90 150 135)" opacity=".9"/>
   <circle cx="150" cy="135" r="75" fill="none" stroke="#4f46e5" stroke-width="26" stroke-dasharray="0.00 471.24" stroke-dashoffset="-469.26" transform="rotate(-90 150 135)" opacity=".9"/>
@@ -21,7 +21,7 @@
   <circle cx="171" cy="232" r="4" fill="#4f46e5"/>
   <text x="181" y="236" font-family="'Courier New',monospace" font-size="10" fill="#8b949e">TSQL <tspan fill="#4f46e5">34.3%</tspan></text>
   <circle cx="29" cy="252" r="4" fill="#3178c6"/>
-  <text x="39" y="256" font-family="'Courier New',monospace" font-size="10" fill="#8b949e">TypeScript <tspan fill="#3178c6">3.3%</tspan></text>
+  <text x="39" y="256" font-family="'Courier New',monospace" font-size="10" fill="#8b949e">TypeScript <tspan fill="#3178c6">3.4%</tspan></text>
   <circle cx="171" cy="252" r="4" fill="#e34c26"/>
   <text x="181" y="256" font-family="'Courier New',monospace" font-size="10" fill="#8b949e">HTML <tspan fill="#e34c26">0.9%</tspan></text>
   <circle cx="29" cy="272" r="4" fill="#3776ab"/>
